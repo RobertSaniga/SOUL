@@ -1,0 +1,15 @@
+<languages version="0.1">
+   <default_language>
+      <name>Čeština</name>
+   </default_language>
+   <another lang_id="de">
+      <language>
+         <name>Deutsch</name>
+      </language>
+   </another>
+   <another lang_id="eng">
+      <language>
+         <name>English</name>
+      </language>
+   </another>
+</languages>
