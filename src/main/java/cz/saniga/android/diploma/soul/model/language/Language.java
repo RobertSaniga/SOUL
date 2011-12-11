@@ -5,25 +5,17 @@ import org.simpleframework.xml.Element;
 public class Language {
 
 	@Element
-	private String name;
+	private String label;
 
 	@Element(required = false)
 	private String descript;
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
+	public String getLabel() {
+		return label;
 	}
 
 	public String getDescript() {
 		return descript;
-	}
-
-	public void setDescript(String descript) {
-		this.descript = descript;
 	}
 
 }

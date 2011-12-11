@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <languages version="0.1">
-   <default_language>
-      <name>Čeština</name>
-   </default_language>
+   <default>
+      <label>Čeština</label>
+   </default>
    <another lang_id="de">
-      <language>
-         <name>Deutsch</name>
-      </language>
+      <label>Deutsch</label>
+      <descript>Nemecky</descript>
    </another>
    <another lang_id="eng">
-      <language>
-         <name>English</name>
-      </language>
+      <label>English</label>
    </another>
 </languages>

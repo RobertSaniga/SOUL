@@ -1,6 +1,5 @@
 package cz.saniga.android.diploma.soul;
 
-import java.io.File;
 import java.io.InputStream;
 
 import org.simpleframework.xml.Serializer;
@@ -9,7 +8,7 @@ import org.simpleframework.xml.core.Persister;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import cz.saniga.android.diploma.soul.model.language.Language;
+import android.widget.EditText;
 import cz.saniga.android.diploma.soul.model.language.Languages;
 
 public class HelloAndroidActivity extends Activity {
@@ -34,9 +33,13 @@ public class HelloAndroidActivity extends Activity {
 			InputStream source = getClass().getResourceAsStream("/language.xml");
 
 			Languages langs = serializer.read(Languages.class, source);
-			System.out.println(langs.toString());
+			EditText textBox = (EditText) findViewById(R.id.editText1);
+			textBox.setText(langs.getAnotherLangs().get(0).getDescript());
+
+			Log.i(TAG, "DONE");
+
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			Log.e(TAG, "CHYBA");
 			e.printStackTrace();
 		}
 
@@ -50,41 +53,39 @@ public class HelloAndroidActivity extends Activity {
 		// }
 		// EditText textBox = (EditText) findViewById(R.id.editText1);
 		// textBox.setText(out.toString());
-
-		Log.i(TAG, "DONE");
 	}
 
-	public void languageSerialize() {
-		// XML serializing
-		Serializer serializer = new Persister();
-
-		// root element
-		Languages languages = new Languages();
-		languages.setVersion("0.1");
-
-		// default
-		Language defaultLang = new Language();
-		defaultLang.setName("Čeština");
-		languages.setDefaultLang(defaultLang);
-
-		// 2
-		Language language2 = new Language();
-		language2.setName("English");
-		languages.getAnotherLangsMap().put("eng", language2);
-
-		// 3
-		Language language3 = new Language();
-		language3.setName("Deutsch");
-		languages.getAnotherLangsMap().put("de", language3);
-
-		// serializing
-		File lang = new File("/sdcard/lang.xml");
-		try {
-			serializer.write(languages, lang);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	// public void languageSerialize() {
+	// // XML serializing
+	// Serializer serializer = new Persister();
+	//
+	// // root element
+	// Languages languages = new Languages();
+	// languages.setVersion("0.1");
+	//
+	// // default
+	// Language defaultLang = new Language();
+	// defaultLang.setName("Čeština");
+	// languages.setDefaultLang(defaultLang);
+	//
+	// // 2
+	// Language language2 = new Language();
+	// language2.setName("English");
+	// languages.getAnotherLangsMap().put("eng", language2);
+	//
+	// // 3
+	// Language language3 = new Language();
+	// language3.setName("Deutsch");
+	// languages.getAnotherLangsMap().put("de", language3);
+	//
+	// // serializing
+	// File lang = new File("/sdcard/lang.xml");
+	// try {
+	// serializer.write(languages, lang);
+	// } catch (Exception e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
+	// }
 
 }
