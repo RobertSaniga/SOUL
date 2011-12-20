@@ -17,7 +17,7 @@ public class Languages extends AbstractVersionType {
 	@Element(name = "default")
 	private Language defaultLang;
 
-	@ElementList(inline = true, entry = "another")
+	@ElementList(inline = true, required = false, entry = "another")
 	private List<AnotherLanguage> anotherLangs = new ArrayList<AnotherLanguage>();
 
 	public Language getDefaultLang() {

@@ -1,5 +1,14 @@
 package cz.saniga.android.diploma.soul.model;
 
-public abstract class AbstractQuestion {
+import org.simpleframework.xml.Attribute;
+
+public abstract class AbstractQuestion extends AbstractSimpleLocalizedType {
+
+	@Attribute
 	private int id;
+
+	public int getId() {
+		return id;
+	}
+
 }

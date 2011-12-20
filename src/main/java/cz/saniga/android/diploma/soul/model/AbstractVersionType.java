@@ -11,8 +11,4 @@ public abstract class AbstractVersionType {
 		return version;
 	}
 
-	public void setVersion(String version) {
-		this.version = version;
-	}
-
 }

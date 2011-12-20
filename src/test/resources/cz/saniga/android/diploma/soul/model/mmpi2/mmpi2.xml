@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mmpi2>
+	<answers>
+		<answer value="1">
+			<default_text>
+				Neco
+			</default_text>
+		</answer>	
+	</answers>
+	<questions>
+		<question id="1">
+			<default_text>
+				nejaka otazka
+			</default_text>
+		</question>
+	</questions>
+</mmpi2>
