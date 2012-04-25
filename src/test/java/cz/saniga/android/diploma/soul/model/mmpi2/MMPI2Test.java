@@ -1,7 +1,7 @@
 package cz.saniga.android.diploma.soul.model.mmpi2;
 
-//import static org.hamcrest.CoreMatchers.is;
-//import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 import java.io.InputStream;
 
@@ -20,7 +20,7 @@ public class MMPI2Test {
 		Serializer serializer = new Persister();
 		MMPI2 mmpi2 = serializer.read(MMPI2.class, getSource());
 
-		// assertThat(Integer.valueOf(mmpi2.getAnswers().get(0).getValue()), is(1));
+		assertThat(mmpi2.getAnswers().size(), is(3));
 		Assert.assertEquals(mmpi2.getAnswers().get(0).getValue(), 1);
 	}
 

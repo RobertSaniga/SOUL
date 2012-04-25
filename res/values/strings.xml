@@ -2,4 +2,5 @@
 <resources>
     <string name="hello">Hello soul!</string>
     <string name="app_name">soul</string>
+    <string name="next_button">Next</string>
 </resources>

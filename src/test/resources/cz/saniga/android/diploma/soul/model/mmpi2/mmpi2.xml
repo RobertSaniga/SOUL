@@ -3,14 +3,29 @@
 	<answers>
 		<answer value="1">
 			<default_text>
-				Neco
+				Odpověď 1
 			</default_text>
-		</answer>	
+		</answer>
+		<answer value="2">
+			<default_text>
+				Odpověď 2
+			</default_text>
+		</answer>
+		<answer value="3">
+			<default_text>
+				Odpověď 3
+			</default_text>
+		</answer>
 	</answers>
 	<questions>
 		<question id="1">
 			<default_text>
-				nejaka otazka
+				nejaka otazka 1
+			</default_text>
+		</question>
+		<question id="2">
+			<default_text>
+				Otázka 2
 			</default_text>
 		</question>
 	</questions>

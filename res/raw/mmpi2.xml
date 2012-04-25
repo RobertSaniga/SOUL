@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mmpi2>
+	<answers>
+		<answer value="1">
+			<default_text>Odpověď 1</default_text>
+		</answer>
+		<answer value="2">
+			<default_text>Odpověď 2</default_text>
+		</answer>
+		<answer value="3">
+			<default_text>Odpověď 3</default_text>
+		</answer>
+	</answers>
+	<questions>
+		<question id="1">
+			<default_text>nejaka otazka 1</default_text>
+		</question>
+		<question id="2">
+			<default_text>Otázka 2</default_text>
+			<another_languages>
+				<text lang="en">Question 2</text>
+				<text lang="de">Frage 2</text>
+				<text lang="jp">質問2</text>
+			</another_languages>
+		</question>
+	</questions>
+</mmpi2>

@@ -6,20 +6,24 @@ import java.util.List;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
+import cz.saniga.android.diploma.soul.model.AbstractQuestion;
+import cz.saniga.android.diploma.soul.model.Option;
+import cz.saniga.android.diploma.soul.model.Test;
+
 @Root(name = "mmpi2")
-public class MMPI2 {
+public class MMPI2 extends Test {
 
 	@ElementList(entry = "answer")
-	private List<MMPI2Answer> answers = new ArrayList<MMPI2Answer>();
+	private List<Option> answers = new ArrayList<Option>();
 
 	@ElementList(entry = "question")
-	private List<MMPI2Question> questions = new ArrayList<MMPI2Question>();
+	private List<AbstractQuestion> questions = new ArrayList<AbstractQuestion>();
 
-	public List<MMPI2Answer> getAnswers() {
+	public List<Option> getAnswers() {
 		return answers;
 	}
 
-	public List<MMPI2Question> getQuestions() {
+	public List<AbstractQuestion> getQuestions() {
 		return questions;
 	}
 
