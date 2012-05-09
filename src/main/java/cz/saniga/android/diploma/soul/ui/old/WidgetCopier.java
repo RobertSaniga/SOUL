@@ -1,4 +1,4 @@
-package cz.saniga.android.diploma.soul.ui;
+package cz.saniga.android.diploma.soul.ui.old;
 
 import android.view.View;
 import android.widget.TextView;

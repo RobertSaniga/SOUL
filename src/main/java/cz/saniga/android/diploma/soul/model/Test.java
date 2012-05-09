@@ -1,11 +1,55 @@
 package cz.saniga.android.diploma.soul.model;
 
+import java.util.List;
+
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.ElementList;
+import org.simpleframework.xml.Root;
+
 /**
- * Basic object for create test
+ * Basic object to create test
  * 
  * @author Robinek
  * 
  */
-public abstract class Test {
+@Root
+public class Test {
+
+	@Attribute
+	private String name;
+
+	// @Attribute
+	// private type evaluationModule;
+
+	@Element(required = false)
+	private String description;
+
+	@ElementList(inline = true, entry = "section")
+	private List<Section> sections;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public List<Section> getSections() {
+		return sections;
+	}
+
+	public void setSections(List<Section> sections) {
+		this.sections = sections;
+	}
 
 }

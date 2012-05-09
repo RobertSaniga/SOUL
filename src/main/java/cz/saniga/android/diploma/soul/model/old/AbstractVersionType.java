@@ -1,4 +1,4 @@
-package cz.saniga.android.diploma.soul.model;
+package cz.saniga.android.diploma.soul.model.old;
 
 import org.simpleframework.xml.Attribute;
 

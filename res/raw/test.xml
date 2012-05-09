@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<test name="Muj prvni test">
+	<section>
+		<choice label="krásně žluťoučký kůň úpěl ďábelské ódy?"/>
+		<choice label="KRÁSNĚ ŽLUŤOUČKÝ KŮŇ ÚPĚL ĎÁBELSKÉ ÓDY?"/>
+	</section>
+</test>

@@ -1,4 +1,4 @@
-package cz.saniga.android.diploma.soul.ui;
+package cz.saniga.android.diploma.soul.ui.old;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +13,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-import cz.saniga.android.diploma.soul.QuestionActivity;
+import cz.saniga.android.diploma.soul.MainActivity;
 import cz.saniga.android.diploma.soul.R;
-import cz.saniga.android.diploma.soul.model.AbstractQuestion;
-import cz.saniga.android.diploma.soul.model.Option;
+import cz.saniga.android.diploma.soul.model.old.AbstractQuestion;
+import cz.saniga.android.diploma.soul.model.old.Option;
 
 public class QuestionView extends LinearLayout implements OnClickListener {
 
@@ -29,7 +29,7 @@ public class QuestionView extends LinearLayout implements OnClickListener {
 
 	private Button nextButton;
 	private RadioGroup radioGroup;
-	private QuestionActivity activity;
+	private MainActivity activity;
 
 	public QuestionView(Context context) {
 		super(context);
@@ -132,7 +132,7 @@ public class QuestionView extends LinearLayout implements OnClickListener {
 		return true;
 	}
 
-	public void setActivity(QuestionActivity activity) {
+	public void setActivity(MainActivity activity) {
 		this.activity = activity;
 	}
 }

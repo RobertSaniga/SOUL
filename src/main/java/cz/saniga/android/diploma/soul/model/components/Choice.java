@@ -1,34 +1,15 @@
 package cz.saniga.android.diploma.soul.model.components;
 
-import org.simpleframework.xml.Attribute;
-
 import android.content.Context;
-import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import cz.saniga.android.diploma.soul.R;
+import android.view.View;
+import cz.saniga.android.diploma.soul.model.Question;
+import cz.saniga.android.diploma.soul.ui.ChoiceViewFactory;
+import cz.saniga.android.diploma.soul.ui.DefaultChoiceViewFactory;
 
-public class Choice extends LinearLayout {
+public class Choice extends Question /* implements hasUIComponent */{
 
-	@Attribute
-	private String label;
-
-	private TextView labelView;
-
-	public Choice(Context context, AttributeSet attrs) {
-		super(context, attrs);
-		LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		layoutInflater.inflate(R.layout.choice_horizontal, null);
-		labelView.setText(label);
+	public View getUIComponent(Context context) {
+		ChoiceViewFactory factory = new DefaultChoiceViewFactory();
+		return factory.createChoiceView(context, this);
 	}
-
-	public String getLabel() {
-		return label;
-	}
-
-	public void setLabel(String label) {
-		this.label = label;
-	}
-
 }

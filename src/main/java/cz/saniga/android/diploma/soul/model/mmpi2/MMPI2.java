@@ -6,9 +6,9 @@ import java.util.List;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
-import cz.saniga.android.diploma.soul.model.AbstractQuestion;
-import cz.saniga.android.diploma.soul.model.Option;
 import cz.saniga.android.diploma.soul.model.Test;
+import cz.saniga.android.diploma.soul.model.old.AbstractQuestion;
+import cz.saniga.android.diploma.soul.model.old.Option;
 
 @Root(name = "mmpi2")
 public class MMPI2 extends Test {
