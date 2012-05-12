@@ -2,7 +2,9 @@ package cz.saniga.android.diploma.soul.model;
 
 import org.simpleframework.xml.Attribute;
 
-public class Question {
+import cz.saniga.android.diploma.soul.model.components.hasUIComponent;
+
+public abstract class Question implements hasUIComponent {
 
 	@Attribute
 	private String label;

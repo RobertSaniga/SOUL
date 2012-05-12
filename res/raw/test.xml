@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <test name="Muj prvni test">
 	<section>
-		<choice label="krásně žluťoučký kůň úpěl ďábelské ódy?">
-			<uiFactory class="cz.saniga.android.diploma.soul.ui.AnotherChoiceViewFactory"/>
-		</choice>
-		<choice label="KRÁSNĚ ŽLUŤOUČKÝ KŮŇ ÚPĚL ĎÁBELSKÉ ÓDY?"/>
+	
+		<page>
+			<choice label="krásně žluťoučký kůň úpěl ďábelské ódy?">
+	<!-- 			<uiFactory class="cz.saniga.android.diploma.soul.ui.choice.AnotherChoiceViewFactory"/> -->
+			</choice>
+		</page>
+		<page>
+			<choice label="KRÁSNĚ ŽLUŤOUČKÝ KŮŇ ÚPĚL ĎÁBELSKÉ ÓDY?">
+				<answers>
+					<answer value="1">moc</answer>
+					<answer value="2">malo</answer>
+				</answers>
+			</choice>
+		</page>
+		
 	</section>
 </test>

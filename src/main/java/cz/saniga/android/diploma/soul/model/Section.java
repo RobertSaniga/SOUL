@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.simpleframework.xml.ElementList;
 
-import cz.saniga.android.diploma.soul.model.components.Choice;
-
 public class Section {
 
 	// @Element(required = false)
@@ -13,16 +11,19 @@ public class Section {
 	//
 	// @Element(required = false)
 	// private Footer footer;
+	//
+	// @Element(required = false)
+	// private Navigation navigation;
 
-	@ElementList(inline = true, required = false, entry = "choice")
-	private List<Choice> Choices;
+	@ElementList(inline = true, entry = "page")
+	private List<Page> pages;
 
-	public List<Choice> getChoices() {
-		return Choices;
+	public List<Page> getPages() {
+		return pages;
 	}
 
-	public void setChoices(List<Choice> choices) {
-		Choices = choices;
+	public void setPages(List<Page> pages) {
+		this.pages = pages;
 	}
 
 }

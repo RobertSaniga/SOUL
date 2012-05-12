@@ -19,8 +19,8 @@ public class Test {
 	@Attribute
 	private String name;
 
-	// @Attribute
-	// private type evaluationModule;
+	// @Element(name = "eval-module")
+	// private EvaluationModule evaluationModule;
 
 	@Element(required = false)
 	private String description;

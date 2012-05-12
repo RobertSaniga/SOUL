@@ -1,33 +1,89 @@
 package cz.saniga.android.diploma.soul;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import cz.saniga.android.diploma.soul.model.Page;
+import cz.saniga.android.diploma.soul.model.Question;
+import cz.saniga.android.diploma.soul.model.Section;
 import cz.saniga.android.diploma.soul.model.Test;
-import cz.saniga.android.diploma.soul.model.components.Choice;
 
 public class TestActivity extends Activity {
+
 	public static final String DATA = "data";
 
-	LinearLayout content;
+	private LinearLayout innerContent;
+
+	private List<Page> pagesContents = new ArrayList<Page>();
+	private int pageIndex = 0;
+	private int pageIndexMax = 0;
+
+	private Button nextButton;
+	private Button backButton;
+
+	private Test test;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		content = (LinearLayout) findViewById(R.id.content);
+		innerContent = (LinearLayout) findViewById(R.id.content);
 
 		String url = getIntent().getStringExtra(DATA);
-		Test test = loadTest(url);
+		test = loadTest(url);
+		preparePagesContents(test);
 
-		for (Choice ch : test.getSections().get(0).getChoices()) {
-			Log.d(this.getClass().getName(), ch.getLabel());
-			content.addView(ch.getUIComponent(this));
+		setPageContent();
+
+		// navigation
+		nextButton = (Button) findViewById(R.id.nextButton);
+		backButton = (Button) findViewById(R.id.backButton);
+		nextButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				if (pageIndex < pagesContents.size() - 1) {
+					innerContent.removeAllViews();
+					pageIndex++;
+					setPageContent();
+				}
+			}
+		});
+		backButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				if (pageIndex > 0) {
+					innerContent.removeAllViews();
+					pageIndex--;
+					setPageContent();
+				}
+			}
+		});
+	}
+
+	private void preparePagesContents(Test t) {
+		for (Section section : t.getSections()) {
+			pagesContents.addAll(section.getPages());
+		}
+	}
+
+	private void setPageContent() {
+		Page page = pagesContents.get(pageIndex);
+		for (Question question : page.getQuestions()) {
+			Log.d(this.getClass().getName(), question.getLabel());
+			innerContent.addView(question.getUIComponent(this));
 		}
 	}
 

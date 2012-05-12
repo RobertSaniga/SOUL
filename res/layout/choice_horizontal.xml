@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<cz.saniga.android.diploma.soul.ui.ChoiceView xmlns:android="http://schemas.android.com/apk/res/android"
+<cz.saniga.android.diploma.soul.ui.choice.ChoiceView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:baselineAligned="true"
@@ -21,9 +21,9 @@
             android:id="@+id/tableRow1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
-
+
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/radioText2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -103,4 +103,4 @@
 
     </RelativeLayout>
 
-</cz.saniga.android.diploma.soul.ui.ChoiceView>
+</cz.saniga.android.diploma.soul.ui.choice.ChoiceView>
