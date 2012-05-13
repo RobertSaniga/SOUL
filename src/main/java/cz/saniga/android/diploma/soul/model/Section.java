@@ -6,24 +6,24 @@ import org.simpleframework.xml.ElementList;
 
 public class Section {
 
-	// @Element(required = false)
-	// private Header header;
-	//
-	// @Element(required = false)
-	// private Footer footer;
-	//
-	// @Element(required = false)
-	// private Navigation navigation;
+  // @Element(required = false)
+  // private Header header;
+  //
+  // @Element(required = false)
+  // private Footer footer;
+  //
+  // @Element(required = false)
+  // private Navigation navigation;
 
-	@ElementList(inline = true, entry = "page")
-	private List<Page> pages;
+  @ElementList(inline = true, entry = "page")
+  private List<Page> pages;
 
-	public List<Page> getPages() {
-		return pages;
-	}
+  public List<Page> getPages() {
+    return pages;
+  }
 
-	public void setPages(List<Page> pages) {
-		this.pages = pages;
-	}
+  public void setPages(List<Page> pages) {
+    this.pages = pages;
+  }
 
 }

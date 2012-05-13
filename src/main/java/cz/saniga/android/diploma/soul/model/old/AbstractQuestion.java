@@ -4,20 +4,20 @@ import org.simpleframework.xml.Attribute;
 
 public class AbstractQuestion extends AbstractSimpleLocalizedType {
 
-	@Attribute
-	private int id;
+  @Attribute
+  private int id;
 
-	private int result;
+  private int result;
 
-	public int getId() {
-		return id;
-	}
+  public int getId() {
+    return id;
+  }
 
-	public int getResult() {
-		return result;
-	}
+  public int getResult() {
+    return result;
+  }
 
-	public void setResult(int result) {
-		this.result = result;
-	}
+  public void setResult(int result) {
+    this.result = result;
+  }
 }

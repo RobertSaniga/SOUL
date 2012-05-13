@@ -13,18 +13,18 @@ import cz.saniga.android.diploma.soul.model.old.Option;
 @Root(name = "mmpi2")
 public class MMPI2 extends Test {
 
-	@ElementList(entry = "answer")
-	private List<Option> answers = new ArrayList<Option>();
+  @ElementList(entry = "answer")
+  private List<Option> answers = new ArrayList<Option>();
 
-	@ElementList(entry = "question")
-	private List<AbstractQuestion> questions = new ArrayList<AbstractQuestion>();
+  @ElementList(entry = "question")
+  private List<AbstractQuestion> questions = new ArrayList<AbstractQuestion>();
 
-	public List<Option> getAnswers() {
-		return answers;
-	}
+  public List<Option> getAnswers() {
+    return answers;
+  }
 
-	public List<AbstractQuestion> getQuestions() {
-		return questions;
-	}
+  public List<AbstractQuestion> getQuestions() {
+    return questions;
+  }
 
 }

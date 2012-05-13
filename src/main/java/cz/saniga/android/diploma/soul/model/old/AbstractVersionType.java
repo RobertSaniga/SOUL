@@ -4,11 +4,11 @@ import org.simpleframework.xml.Attribute;
 
 public abstract class AbstractVersionType {
 
-	@Attribute
-	private String version;
+  @Attribute
+  private String version;
 
-	public String getVersion() {
-		return version;
-	}
+  public String getVersion() {
+    return version;
+  }
 
 }

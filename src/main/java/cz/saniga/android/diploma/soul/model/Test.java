@@ -16,40 +16,40 @@ import org.simpleframework.xml.Root;
 @Root
 public class Test {
 
-	@Attribute
-	private String name;
+  @Attribute
+  private String name;
 
-	// @Element(name = "eval-module")
-	// private EvaluationModule evaluationModule;
+  // @Element(name = "eval-module")
+  // private EvaluationModule evaluationModule;
 
-	@Element(required = false)
-	private String description;
+  @Element(required = false)
+  private String description;
 
-	@ElementList(inline = true, entry = "section")
-	private List<Section> sections;
+  @ElementList(inline = true, entry = "section")
+  private List<Section> sections;
 
-	public String getName() {
-		return name;
-	}
+  public String getName() {
+    return name;
+  }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	public String getDescription() {
-		return description;
-	}
+  public String getDescription() {
+    return description;
+  }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+  public void setDescription(String description) {
+    this.description = description;
+  }
 
-	public List<Section> getSections() {
-		return sections;
-	}
+  public List<Section> getSections() {
+    return sections;
+  }
 
-	public void setSections(List<Section> sections) {
-		this.sections = sections;
-	}
+  public void setSections(List<Section> sections) {
+    this.sections = sections;
+  }
 
 }

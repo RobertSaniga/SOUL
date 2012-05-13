@@ -9,19 +9,19 @@ import cz.saniga.android.diploma.soul.model.components.Choice;
 
 public class Page {
 
-	// TODO add all components
-	@ElementListUnion({
-	    @ElementList(entry = "question", inline = true, type = Question.class),
-	    @ElementList(entry = "choice", inline = true, type = Choice.class)
-	})
-	private Collection<Question> questions;
+  // TODO add all components
+  @ElementListUnion({
+      // @ElementList(entry = "question", inline = true, type = Question.class),
+      @ElementList(entry = "choice", inline = true, type = Choice.class)
+  })
+  private Collection<AbstractQuestion> questions;
 
-	public Collection<Question> getQuestions() {
-		return questions;
-	}
+  public Collection<AbstractQuestion> getQuestions() {
+    return questions;
+  }
 
-	public void setQuestions(Collection<Question> questions) {
-		this.questions = questions;
-	}
+  public void setQuestions(Collection<AbstractQuestion> questions) {
+    this.questions = questions;
+  }
 
 }

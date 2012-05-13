@@ -6,6 +6,6 @@ import cz.saniga.android.diploma.soul.model.components.Choice;
 
 public interface ChoiceUIComponentFactory {
 
-	public View createChoiceView(Context context, Choice choice);
+  public View createChoiceView(Context context, Choice choice);
 
 }

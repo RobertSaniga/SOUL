@@ -5,26 +5,26 @@ import org.simpleframework.xml.Text;
 
 public class Answer {
 
-	@Attribute
-	private int value;
+  @Attribute
+  private int value;
 
-	@Text
-	private String text;
+  @Text
+  private String text;
 
-	public int getValue() {
-		return value;
-	}
+  public int getValue() {
+    return value;
+  }
 
-	public void setValue(int value) {
-		this.value = value;
-	}
+  public void setValue(int value) {
+    this.value = value;
+  }
 
-	public String getText() {
-		return text;
-	}
+  public String getText() {
+    return text;
+  }
 
-	public void setText(String text) {
-		this.text = text;
-	}
+  public void setText(String text) {
+    this.text = text;
+  }
 
 }

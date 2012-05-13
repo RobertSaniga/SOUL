@@ -13,89 +13,99 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import cz.saniga.android.diploma.soul.model.AbstractQuestion;
 import cz.saniga.android.diploma.soul.model.Page;
-import cz.saniga.android.diploma.soul.model.Question;
 import cz.saniga.android.diploma.soul.model.Section;
 import cz.saniga.android.diploma.soul.model.Test;
 
 public class TestActivity extends Activity {
 
-	public static final String DATA = "data";
+  public static final String DATA = "data";
 
-	private LinearLayout innerContent;
+  private LinearLayout innerContent;
 
-	private List<Page> pagesContents = new ArrayList<Page>();
-	private int pageIndex = 0;
-	private int pageIndexMax = 0;
+  private List<Page> pagesContents = new ArrayList<Page>();
+  private int pageIndex = 0;
+  private int pageIndexMax = 0;
 
-	private Button nextButton;
-	private Button backButton;
+  private Button nextButton;
+  private Button backButton;
 
-	private Test test;
+  private Test test;
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.main);
 
-		innerContent = (LinearLayout) findViewById(R.id.content);
+    innerContent = (LinearLayout) findViewById(R.id.content);
 
-		String url = getIntent().getStringExtra(DATA);
-		test = loadTest(url);
-		preparePagesContents(test);
+    String url = getIntent().getStringExtra(DATA);
+    test = loadTest(url);
+    preparePagesContents(test);
 
-		setPageContent();
+    setPageContent();
 
-		// navigation
-		nextButton = (Button) findViewById(R.id.nextButton);
-		backButton = (Button) findViewById(R.id.backButton);
-		nextButton.setOnClickListener(new OnClickListener() {
+    // navigation
+    nextButton = (Button) findViewById(R.id.nextButton);
+    backButton = (Button) findViewById(R.id.backButton);
+    nextButton.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				if (pageIndex < pagesContents.size() - 1) {
-					innerContent.removeAllViews();
-					pageIndex++;
-					setPageContent();
-				}
-			}
-		});
-		backButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        if (pageIndex < pagesContents.size() - 1) {
+          innerContent.removeAllViews();
+          pageIndex++;
+          setPageContent();
+        }
+      }
+    });
+    backButton.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				if (pageIndex > 0) {
-					innerContent.removeAllViews();
-					pageIndex--;
-					setPageContent();
-				}
-			}
-		});
-	}
+      @Override
+      public void onClick(View v) {
+        if (pageIndex > 0) {
+          innerContent.removeAllViews();
+          pageIndex--;
+          setPageContent();
+        }
+      }
+    });
+  }
 
-	private void preparePagesContents(Test t) {
-		for (Section section : t.getSections()) {
-			pagesContents.addAll(section.getPages());
-		}
-	}
+  private void preparePagesContents(Test t) {
+    for (Section section : t.getSections()) {
+      pagesContents.addAll(section.getPages());
+    }
+  }
 
-	private void setPageContent() {
-		Page page = pagesContents.get(pageIndex);
-		for (Question question : page.getQuestions()) {
-			Log.d(this.getClass().getName(), question.getLabel());
-			innerContent.addView(question.getUIComponent(this));
-		}
-	}
+  private void setPageContent() {
+    Page page = pagesContents.get(pageIndex);
+    for (AbstractQuestion question : page.getQuestions()) {
+      Log.d(this.getClass().getName(), question.getLabel());
+      innerContent.addView(question.getUIComponent(this));
+    }
+  }
 
-	private Test loadTest(String url) {
-		Serializer serializer = new Persister();
-		try {
-			return serializer.read(Test.class, getResources().openRawResource(R.raw.test));
-			// return serializer.read(Test.class,
-			// getClass().getResourceAsStream(url));
-		} catch (Exception e) {
-			e.printStackTrace();
-			return null;
-		}
-	}
+  // private List<QuestionResult> getQuestionsResult() {
+  // List<QuestionResult> questionsResults = new ArrayList<QuestionResult>();
+  // for (Page page : pagesContents) {
+  // for (AbstractQuestion question : page.getQuestions()) {
+  // questionsResults.add(new QuestionResult(question,
+  // question.getPacientResult()));
+  // }
+  // }
+  // }
+
+  private Test loadTest(String url) {
+    Serializer serializer = new Persister();
+    try {
+      return serializer.read(Test.class, getResources().openRawResource(R.raw.test));
+      // return serializer.read(Test.class,
+      // getClass().getResourceAsStream(url));
+    } catch (Exception e) {
+      e.printStackTrace();
+      return null;
+    }
+  }
 }
