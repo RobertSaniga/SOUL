@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <test name="Muj prvni test">
+	<eval-module class="cz.saniga.android.diploma.soul.evaluation.MMPI2EvaluationModule"/>
 	<section>
 	
 		<page>
