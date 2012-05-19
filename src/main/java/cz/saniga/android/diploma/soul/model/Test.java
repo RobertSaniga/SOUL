@@ -7,6 +7,8 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
+import cz.saniga.android.diploma.soul.evaluation.EvaluationModule;
+
 /**
  * Basic object to create test
  * 
@@ -19,8 +21,8 @@ public class Test {
   @Attribute
   private String name;
 
-  // @Element(name = "eval-module")
-  // private EvaluationModule evaluationModule;
+  @Element(name = "eval-module")
+  private EvaluationModule evaluationModule;
 
   @Element(required = false)
   private String description;
@@ -50,6 +52,10 @@ public class Test {
 
   public void setSections(List<Section> sections) {
     this.sections = sections;
+  }
+
+  public EvaluationModule getEvaluationModule() {
+    return evaluationModule;
   }
 
 }

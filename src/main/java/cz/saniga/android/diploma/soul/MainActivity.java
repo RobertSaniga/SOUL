@@ -1,15 +1,9 @@
 package cz.saniga.android.diploma.soul;
 
-import java.util.List;
-
-import org.simpleframework.xml.Serializer;
-import org.simpleframework.xml.core.Persister;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import cz.saniga.android.diploma.soul.model.Test;
-import cz.saniga.android.diploma.soul.model.old.AbstractQuestion;
 
 public class MainActivity extends Activity {
 
@@ -59,18 +53,4 @@ public class MainActivity extends Activity {
     super.onStart();
   }
 
-  private void loadModel() {
-    Serializer serializer = new Persister();
-    // InputStream resourceAsStream =
-    // getClass().getResourceAsStream("/mmpi2.xml");
-    try {
-      test = serializer.read(Test.class, getResources().openRawResource(R.raw.test));
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
-
-  public void evaluateTest(List<AbstractQuestion> questions) {
-    // this.evaluationModule.evaluate();
-  }
 }

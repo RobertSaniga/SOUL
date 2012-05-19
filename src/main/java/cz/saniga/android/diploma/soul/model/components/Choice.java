@@ -8,8 +8,8 @@ import org.simpleframework.xml.ElementList;
 
 import android.content.Context;
 import android.view.View;
-import cz.saniga.android.diploma.soul.model.Answer;
 import cz.saniga.android.diploma.soul.model.AbstractQuestion;
+import cz.saniga.android.diploma.soul.model.Answer;
 import cz.saniga.android.diploma.soul.ui.choice.ChoiceUIComponentFactory;
 import cz.saniga.android.diploma.soul.ui.choice.DefaultChoiceViewFactory;
 
@@ -20,6 +20,8 @@ public class Choice extends AbstractQuestion {
 
   @ElementList(required = false, entry = "answer")
   private List<Answer> answers = new ArrayList<Answer>();
+
+  private Answer result;
 
   // UI
   private View choiceView;
@@ -37,6 +39,14 @@ public class Choice extends AbstractQuestion {
 
   public void setAnswers(List<Answer> answers) {
     this.answers = answers;
+  }
+
+  public Answer getResult() {
+    return result;
+  }
+
+  public void setResult(Answer result) {
+    this.result = result;
   }
 
 }

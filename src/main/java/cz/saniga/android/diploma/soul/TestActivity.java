@@ -7,6 +7,7 @@ import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -57,6 +58,10 @@ public class TestActivity extends Activity {
           innerContent.removeAllViews();
           pageIndex++;
           setPageContent();
+        } else {
+          // evaluate test and return Intent with new Activity to draw
+          Intent evaluationResults = test.getEvaluationModule().evaluate(pagesContents);
+          startActivity(evaluationResults);
         }
       }
     });
