@@ -59,6 +59,11 @@ public class TestActivity extends Activity {
           pageIndex++;
           setPageContent();
         } else {
+          /*
+           * TODO: Use another thread to evaluation. Main thread use for
+           * "Please wait" bar
+           */
+
           // evaluate test and return Intent with new Activity to draw
           Intent evaluationResults = test.getEvaluationModule().evaluate(pagesContents);
           startActivity(evaluationResults);
