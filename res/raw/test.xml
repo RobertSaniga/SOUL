@@ -4,7 +4,7 @@
 	<section>
 	
 		<page>
-			<choice label="krásně žluťoučký kůň úpěl ďábelské ódy?">
+			<choice label="krásně žluťoučký kůň úpěl ďábelské ódy?" uiClass="cz.saniga.android.diploma.soul.ui.choice.ChoiceView">
 	<!-- 			<uiFactory class="cz.saniga.android.diploma.soul.ui.choice.AnotherChoiceViewFactory"/> -->
 			</choice>
 		</page>

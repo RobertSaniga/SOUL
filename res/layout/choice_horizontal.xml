@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<cz.saniga.android.diploma.soul.ui.choice.ChoiceView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:baselineAligned="true"
@@ -103,4 +103,4 @@
 
     </RelativeLayout>
 
-</cz.saniga.android.diploma.soul.ui.choice.ChoiceView>
+</LinearLayout>
