@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="choiceHorizontalRadioSidePadding">10dp</dimen>
+    <dimen name="choiceHorizontalRadioSidePadding">5dp</dimen>
+    <dimen name="choiceHorizontalRadioWidth">60dp</dimen>
 </resources>

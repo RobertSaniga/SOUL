@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <test name="Muj prvni test">
 	<eval-module class="cz.saniga.android.diploma.soul.evaluation.MMPI2EvaluationModule"/>
-<!-- 	<answers id="answers1"> -->
-<!-- 		<answer value="1">vůbec ne</answer> -->
-<!-- 		<answer value="2">spíše ne</answer> -->
-<!-- 		<answer value="3">možná</answer> -->
-<!-- 		<answer value="4">spíše ano</answer> -->
-<!-- 		<answer value="5">ano</answer> -->
-<!-- 	</answers> -->
+	
+	<answers id="answers1">
+		<answer value="1">vůbec ne</answer>
+		<answer value="2">spíše ne</answer>
+		<answer value="3">možná</answer>
+		<answer value="4">spíše ano</answer>
+		<answer value="5">ano</answer>
+	</answers>
+	
 	<section>
 	
 <!-- 		<page> -->
@@ -16,11 +18,11 @@
 <!-- 		</page> -->
 		<page>
 			<choice label="KRÁSNĚ ŽLUŤOUČKÝ KŮŇ ÚPĚL ĎÁBELSKÉ ÓDY?">
-<!-- 				<answers ref="answers1"> -->
-				<answers>
-					<answer value="1">moc</answer>
-					<answer value="2">malo</answer>
-				</answers>
+				<answers ref="answers1"/>
+<!-- 				<answers> -->
+<!-- 					<answer value="1">moc</answer> -->
+<!-- 					<answer value="2">malo</answer> -->
+<!-- 				</answers> -->
 			</choice>
 		</page>
 		<page>
