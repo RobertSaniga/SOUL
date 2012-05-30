@@ -7,7 +7,10 @@ import cz.saniga.android.diploma.soul.model.Test;
 
 public class MainActivity extends Activity {
 
-  private static String TAG = MainActivity.class.getName();
+  public static final String TAG = "SOUL";
+  public static final String PATH = "/";
+
+  private static final String TEST_URL = PATH + "test.xml";
 
   Test test;
 
@@ -31,7 +34,7 @@ public class MainActivity extends Activity {
     super.onCreate(savedInstanceState);
 
     Intent i = new Intent(this, TestActivity.class);
-    i.putExtra(TestActivity.DATA, "url");
+    i.putExtra(TestActivity.DATA, TEST_URL);
     startActivity(i);
   }
 

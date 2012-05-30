@@ -4,11 +4,12 @@
     android:layout_height="wrap_content"
     android:baselineAligned="true"
     android:orientation="vertical" >
-
+
     <TextView
-        android:id="@+id/label"
+        android:id="@+id/choiceHorizontalLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="5dip"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -21,29 +22,50 @@
             android:id="@+id/tableRow1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
-
+
+            <TextView
+                android:id="@+id/radioText0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/choiceHorizontalRadioSidePadding"
+                android:paddingRight="@dimen/choiceHorizontalRadioSidePadding"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/radioText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/choiceHorizontalRadioSidePadding"
+                android:paddingRight="@dimen/choiceHorizontalRadioSidePadding"
+                android:text="TextView" />
+
             <TextView
                 android:id="@+id/radioText2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:padding="5dip"
+                android:paddingLeft="@dimen/choiceHorizontalRadioSidePadding"
+                android:paddingRight="@dimen/choiceHorizontalRadioSidePadding"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/radioText3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:padding="5dip"
+                android:paddingLeft="@dimen/choiceHorizontalRadioSidePadding"
+                android:paddingRight="@dimen/choiceHorizontalRadioSidePadding"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/radioText4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:padding="5dip"
+                android:paddingLeft="@dimen/choiceHorizontalRadioSidePadding"
+                android:paddingRight="@dimen/choiceHorizontalRadioSidePadding"
                 android:text="TextView" />
         </TableRow>
 
@@ -51,6 +73,18 @@
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
 
             <RadioButton
                 android:id="@+id/radio2"
@@ -71,36 +105,5 @@
                 android:layout_gravity="center_horizontal" />
         </TableRow>
     </TableLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="90dp" >
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:text="Medium Text"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <RadioButton
-            android:id="@+id/radio1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="74dp"
-            android:layout_toRightOf="@+id/textView1" />
-
-        <RadioButton
-            android:id="@+id/radio0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true" />
-
-    </RelativeLayout>
 
 </LinearLayout>

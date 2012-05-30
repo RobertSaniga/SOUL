@@ -6,12 +6,14 @@ import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.ElementListUnion;
 
 import cz.saniga.android.diploma.soul.model.components.Choice;
+import cz.saniga.android.diploma.soul.model.components.ImageChoice;
 
 public class Page {
 
   // TODO add all components
   @ElementListUnion({
       // @ElementList(entry = "question", inline = true, type = Question.class),
+      @ElementList(entry = "imageChoice", inline = true, type = ImageChoice.class),
       @ElementList(entry = "choice", inline = true, type = Choice.class)
   })
   private Collection<AbstractQuestion> questions;

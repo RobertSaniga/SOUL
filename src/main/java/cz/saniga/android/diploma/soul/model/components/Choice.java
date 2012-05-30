@@ -27,7 +27,7 @@ public class Choice extends AbstractQuestion {
   private AbstractChoiceView choiceView;
 
   public AbstractChoiceView getUIComponent(Context context) {
-    // TODO: popremyslet o Object pool(ingu)
+    // TODO: popremyslet o Object pool(ingu) jiz inflatnutych layout xml
     if (choiceView == null) {
       if (uiClass != null) {
         try {
@@ -36,7 +36,7 @@ public class Choice extends AbstractQuestion {
           return choiceView;
 
         } catch (Exception e) {
-          Log.w(getClass().getName(), "Problem s vytvorenim UI komponenty", e);
+          Log.w(getClass().getName(), "Problem s vytvorenim UI komponenty pro otazku: " + getLabel(), e);
         }
       }
 

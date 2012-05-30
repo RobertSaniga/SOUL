@@ -1,4 +1,4 @@
-package cz.saniga.android.diploma.soul.model.components;
+package cz.saniga.android.diploma.soul.model;
 
 import android.content.Context;
 import android.view.View;

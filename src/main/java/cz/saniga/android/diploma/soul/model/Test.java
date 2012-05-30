@@ -30,6 +30,9 @@ public class Test {
   @ElementList(inline = true, entry = "section")
   private List<Section> sections;
 
+  @ElementList(required = false, entry = "answer")
+  private List<Answer> answers;
+
   public String getName() {
     return name;
   }

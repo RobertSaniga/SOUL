@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
+import org.simpleframework.xml.strategy.CycleStrategy;
+import org.simpleframework.xml.strategy.Strategy;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -92,7 +94,7 @@ public class TestActivity extends Activity {
   private void setPageContent() {
     Page page = pagesContents.get(pageIndex);
     for (AbstractQuestion question : page.getQuestions()) {
-      Log.d(this.getClass().getName(), question.getLabel());
+      Log.d(this.getClass().getName(), question.toString());
       innerContent.addView(question.getUIComponent(this));
     }
   }
@@ -108,11 +110,19 @@ public class TestActivity extends Activity {
   // }
 
   private Test loadTest(String url) {
-    Serializer serializer = new Persister();
+    Strategy strategy = new CycleStrategy("id", "ref");
+    Serializer serializer = new Persister(strategy);
     try {
-      return serializer.read(Test.class, getResources().openRawResource(R.raw.test));
+      // z res/raw (z androidich resources)
       // return serializer.read(Test.class,
-      // getClass().getResourceAsStream(url));
+      // getResources().openRawResource(R.raw.test));
+
+      // z src/main/resources
+      return serializer.read(Test.class, getClass().getResourceAsStream(url));
+
+      // z SD karty (pouzij DDMS)
+      // File file = new File("/sdcard/soul-test/test.xml");
+      // return serializer.read(Test.class, file);
     } catch (Exception e) {
       e.printStackTrace();
       return null;

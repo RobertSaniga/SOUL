@@ -10,41 +10,47 @@ package cz.saniga.android.diploma.soul;
 public final class R {
     public static final class attr {
     }
+    public static final class dimen {
+        public static final int choiceHorizontalRadioSidePadding=0x7f050000;
+    }
     public static final class drawable {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int backButton=0x7f060011;
-        public static final int content=0x7f06000f;
-        public static final int footer=0x7f060013;
-        public static final int header=0x7f06000e;
-        public static final int label=0x7f060000;
-        public static final int navigation=0x7f060010;
-        public static final int nextButton=0x7f060012;
-        public static final int radio0=0x7f06000d;
-        public static final int radio1=0x7f06000c;
-        public static final int radio2=0x7f060007;
-        public static final int radio3=0x7f060008;
-        public static final int radio4=0x7f060009;
-        public static final int radioText2=0x7f060003;
-        public static final int relativeLayout1=0x7f06000a;
-        public static final int tableLayout1=0x7f060001;
-        public static final int tableRow1=0x7f060002;
-        public static final int tableRow2=0x7f060006;
-        public static final int textView1=0x7f06000b;
-        public static final int textView3=0x7f060004;
-        public static final int textView4=0x7f060005;
+        public static final int RelativeLayout1=0x7f07000f;
+        public static final int backButton=0x7f070013;
+        public static final int choiceHorizontalLabel=0x7f070000;
+        public static final int content=0x7f070015;
+        public static final int footer=0x7f070011;
+        public static final int header=0x7f070010;
+        public static final int navigation=0x7f070012;
+        public static final int nextButton=0x7f070014;
+        public static final int option0=0x7f07000e;
+        public static final int radio0=0x7f070009;
+        public static final int radio1=0x7f07000a;
+        public static final int radio2=0x7f07000b;
+        public static final int radio3=0x7f07000c;
+        public static final int radio4=0x7f07000d;
+        public static final int radioText0=0x7f070003;
+        public static final int radioText1=0x7f070004;
+        public static final int radioText2=0x7f070005;
+        public static final int radioText3=0x7f070006;
+        public static final int radioText4=0x7f070007;
+        public static final int tableLayout1=0x7f070001;
+        public static final int tableRow1=0x7f070002;
+        public static final int tableRow2=0x7f070008;
     }
     public static final class layout {
         public static final int choice_horizontal=0x7f030000;
-        public static final int main=0x7f030001;
+        public static final int image_choice=0x7f030001;
+        public static final int main=0x7f030002;
     }
     public static final class raw {
         public static final int test=0x7f040000;
     }
     public static final class string {
-        public static final int app_name=0x7f050001;
-        public static final int hello=0x7f050000;
-        public static final int next_button=0x7f050002;
+        public static final int app_name=0x7f060001;
+        public static final int hello=0x7f060000;
+        public static final int next_button=0x7f060002;
     }
 }
